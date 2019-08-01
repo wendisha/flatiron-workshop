@@ -1,19 +1,15 @@
 {
     "manifest_version": 2,
-    "name": "<EXTENSION-NAME>",
+    "name": "<first-extension>",
     "version": "1.0",
 
-    "description": "<A USEFUL DESCRIPTION>",
-
-    "icons": {
-        "48": "<URL TO AN ICON>",
-        "96": "<URL TO AN ICON>"
-    },
+    "description": "Our first browser extension",
 
     "content_scripts": [
         {
-        "matches": ["<URL MATCHER>"],
-        "js": ["<RELATIVE PATH TO A JS FILE>"]
+        "matches": ["*://*.linkedin.com/*"],
+        "js": ["first-extension.js"]
         }
-    ]
+    ],
+    "web_accessible_resources": ["images/kitten.jpg"]
 }
